@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Book App</string>
+    <string name="welcome_text">Welcome to Book App</string>
+    <string name="library">Library</string>
+    <string name="readers">Readers</string>
+    <string name="likes">Likes</string>
+    <string name="quotes">Quotes</string>
+    <string name="genre">Genre</string>
+</resources>

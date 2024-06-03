@@ -28,7 +28,14 @@ class BookAdapter(var books: List<Book>, val isPrimaryTextColor: Boolean, val cl
         private val text = itemView.findViewById<TextView>(R.id.textView4)
         private val imageView = itemView.findViewById<ImageView>(R.id.imageView2)
         fun bind(bannerSlide: Book) {
-            text.text = bannerSlide.name
+            val maxChars = 15
+            val limitedText = if (bannerSlide.name.length > maxChars) {
+                bannerSlide.name.substring(0, maxChars) + "..."
+            } else {
+                bannerSlide.name
+            }
+
+            text.text = limitedText
             if (isPrimaryTextColor) {
                 text.setTextColor(text.context.getColor(R.color.primary_text_color))
             } else {

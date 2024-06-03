@@ -95,7 +95,6 @@ class DetailFragment: Fragment() {
 
     private fun observeViewModel() {
         viewModel.headerCarouselBooks.observe(viewLifecycleOwner) { books ->
-          //  updateViewSize(bookId)
             viewModel.headerCarouselBooks.value?.get(bookId)?.let {
                 updateBookDetails(it)
                 headerRecyclerView.scrollToPosition(bookId)
